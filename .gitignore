@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Виртуальные окружения
+venv/
+venv*/
+.venv/
+env/
+
+# Секреты и локальные настройки
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE / ОС
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Логи
+*.log
+logs/
+
+# Node
+node_modules/
+dist/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Токены и коды авторизации hh.ru
+hh_token.json
+hh_code.json
+
+# Локальные данные: кэш LLM-оценок кандидатов, журнал действий (персональные данные)
+llm_cache.sqlite3
+*.sqlite3
+audit/
+
+# Веб-версия — отдельный репозиторий (ai-talent-genome)
+ai-talent-ui/

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "score": {"type": "integer", "minimum": 0, "maximum": 100},
+        "rationale_ru": {"type": "string", "minLength": 10},
+        "flags": {
+            "type": "object",
+            "properties": {
+                "missing_cover_letter": {"type": "boolean"},
+                "missing_experience": {"type": "boolean"}
+            },
+            "required": ["missing_cover_letter", "missing_experience"]
+        },
+        "extracted_fields": {
+            "type": "object",
+            "properties": {
+                "desired_position": {"type": "string"},
+                "experience_summary": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                "cover_letter": {
+                    "type": "string"
+                }
+            },
+            "required": ["desired_position", "experience_summary", "cover_letter"]
+        }
+    },
+    "required": ["score", "rationale_ru", "flags", "extracted_fields"]
+}
